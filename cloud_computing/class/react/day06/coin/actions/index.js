@@ -15,10 +15,10 @@ export const FETCH_COIN = 'FETCH_COIN';
 
 export function fetchCoin(coin) {
     const url = `${ROOT_URL}?command=${command}&currencyPair=${coin}&start=${start}&end=${end}&period=${period}`;
-    const request = axios.get(url);
+    const request = axios.get(url).then;
+    
     return{
         type: FETCH_COIN,
         payload: request
     }
-    
 }

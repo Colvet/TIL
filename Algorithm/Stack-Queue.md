@@ -17,6 +17,23 @@ list.reverse()
 list[::-1]
 ```
 
-## 다리를 지나는 트럭
-> 출처: https://programmers.co.kr/learn/courses/30/lessons/42583
+## 쇠막대기
+> 출처: https://programmers.co.kr/learn/courses/30/lessons/42585
 
+
+```python
+def solution(arrangement):
+    answer = 0
+    bar = []
+
+    for tmp, a in zip(arrangement[:-1],arrangement[1:]):
+        if tmp == '(':  # 상황별로 나누어서 생각해보기
+            if a == '(':
+                bar.append(1)
+                answer += 1
+            elif a == ')':
+                answer += len(bar)
+        elif tmp == ')' and a ==')':
+            bar.pop()
+    return answer
+```

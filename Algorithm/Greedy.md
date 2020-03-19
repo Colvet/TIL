@@ -5,3 +5,51 @@
 
 ## 체육복
 > 출처: https://programmers.co.kr/learn/courses/30/lessons/42862
+
+```python
+def solution(n, lost, reserve):
+    answer = [1] * n
+    clothes = [0] * n
+
+    # 여유분 체육복을 가지고 있지만 잃어버린 경우
+    _lost = [l for l in lost if l not in reserve]
+    _reserve = [r for r in reserve if r not in lost]
+    
+```
+
+## Union-Find(합집합 찾기)
+> 여러개의 노드가 존재할 때 두개의 노드가 같은 집합에 속하는지 판별하는 알고리즘
++ 부모를 합칠때 일반적으로 노드의 숫자가 작은 것으로 합침
++ 재귀함수를 이용
+```python
+# python
+# 초기화, n개의 노드
+parent = [i for i in range(n)]
+root = [0] * n
+
+# 부모노드 가지고오기
+def find (x):
+    if parent[x] == x:
+        return x
+    else:
+        return find(root[x])
+
+# 부모 노드 합치기
+def union(x,y):
+    _x = find(x)
+    _y = find(y)
+    if _x < _y:
+        root[_y] = _x
+    elif 
+    else:
+        root[_x] = _y
+
+# 같은 부모 노드인지 확인
+def findParent(x,y):
+    _x = find(x)
+    _y = find(y)
+    if _x == _y:
+        return True
+    else:
+        return False
+```

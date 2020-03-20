@@ -18,6 +18,7 @@ def solution(n, lost, reserve):
 ```
 
 ## Union-Find(합집합 찾기)
+> 참고 문제: https://www.acmicpc.net/problem/1717
 > 여러개의 노드가 존재할 때 두개의 노드가 같은 집합에 속하는지 판별하는 알고리즘
 + 부모를 합칠때 일반적으로 노드의 숫자가 작은 것으로 합침
 + 재귀함수를 이용
@@ -25,31 +26,37 @@ def solution(n, lost, reserve):
 # python
 # 초기화, n개의 노드
 parent = [i for i in range(n)]
-root = [0] * n
 
 # 부모노드 가지고오기
-def find (x):
+def findParent(x):
     if parent[x] == x:
         return x
     else:
-        return find(root[x])
+        return findParent(parent[x])
 
 # 부모 노드 합치기
 def union(x,y):
-    _x = find(x)
-    _y = find(y)
-    if _x < _y:
-        root[_y] = _x
-    elif 
+    _x = findParent(x)
+    _y = findParent(y)
+    if _x == _y:
+        return
+
+    elif _x < _y:
+        parent[_y] = _x
+    
     else:
-        root[_x] = _y
+        parent[_x] = _y
 
 # 같은 부모 노드인지 확인
-def findParent(x,y):
-    _x = find(x)
-    _y = find(y)
+def checkParent(x, y):
+    _x = findParent(x)
+    _y = findParent(y)
+    
     if _x == _y:
         return True
     else:
         return False
 ```
+
+
+

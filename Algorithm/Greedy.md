@@ -38,14 +38,7 @@ def findParent(x):
 def union(x,y):
     _x = findParent(x)
     _y = findParent(y)
-    if _x == _y:
-        return
-
-    elif _x < _y:
-        parent[_y] = _x
-    
-    else:
-        parent[_x] = _y
+    parent[_y] = _x
 
 # 같은 부모 노드인지 확인
 def checkParent(x, y):

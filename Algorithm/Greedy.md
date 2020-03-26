@@ -50,6 +50,3 @@ def checkParent(x, y):
     else:
         return False
 ```
-
-
-

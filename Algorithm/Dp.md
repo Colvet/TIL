@@ -1,0 +1,38 @@
+# Dynamic Programming(동적 프로그래밍)
+> 큰 문제를 작은 문제로 나눠서 푸는 알고리즘
+
+## Meomozation
+> 작은 문제의 결과값이 항상 같기때문에 작은 문제의 값들을 저장      
+> 다음 계산을 할때 저장된 값들을 불러 중복을 없애 시간 복잡도를 줄임
+
+## Tip
++ Dp(1), Dp(2), Dp(3)... 을 구해 점화식을 세운후 알고리즘 작성
++ top-down, bottom-up 방식, 기본적으로 top-down방식의 시간이 더 걸린다고 알려져 있음
++ Top-down: 재귀함수, Bottom-up: For문
+
+## 피보나치 수열
+> 대표적인 Dp 문제
++ f(x) = f(x-1) + f(x-2)
+
+## 1로 만들기
+> 출처: https://www.acmicpc.net/problem/1463
+
+```python
+if __name__ == "__main__":
+    n = int(input())
+    memo = [0,0,1,1]
+    
+    for i in range(4, n+1):
+        memo.append(memo[i-1] + 1)
+
+        # 2 와 3의 공약수 일 경우 둘다 계산을 해 주어야 한다.
+        if i % 2 == 0:
+            memo[i] = min(memo[i//2] + 1, memo[i])
+        if i % 3 == 0:
+            memo[i] = min(memo[i//3] + 1, memo[i])
+    print(memo[n])
+```
+
+## 계단 오르기
+> 출처: https://www.acmicpc.net/problem/2579
+

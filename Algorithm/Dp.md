@@ -52,7 +52,7 @@ if __name__ == "__main__":
             Dp[1] = score[0] + score[1]
         elif i == 2:
             Dp[2] =  max(score[0] + score[2], score[1] + score[2])
-       ## 마지막칸은 항상 밟아야 되며 3칸이상 연속으로 밟을 수 없다. 
+       ## 마지막칸은 항상 밟아야 되며 3칸이상 연속으로 밟을 수 없다.
         else:
             Dp[i] = max(Dp[i-2] + score[i], Dp[i-3] + score[i] + score[i-1] )
     print(Dp[N-1])

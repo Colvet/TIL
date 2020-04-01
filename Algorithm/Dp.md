@@ -58,3 +58,26 @@ if __name__ == "__main__":
     print(Dp[N-1])
     
 ```
+## 타일 장식물
+> 출처: https://programmers.co.kr/learn/courses/30/lessons/43104
++ 규칙 찾기 dp[i-2], dp[i-1](변의 길이)
+
+## 정수 삼각형
+> 출처: https://programmers.co.kr/learn/courses/30/lessons/43105
+
+```python
+## 규칙 찾기가 핵심
+def solution(triangle):
+    for row,t in enumerate(triangle[1:]):
+        for i,x in enumerate(t):
+            # 첫번째 원소는 항상 첫번쨰 원소의 합
+            if i == 0:
+                triangle[row+1][i] += triangle[row][0]
+            # 마지막 원소는 항상 마지막 원소의 합
+            elif i == row+1:
+                triangle[row+1][i] += triangle[row][-1]
+            # row+1 줄의 값의 윗줄 중 큰 값을 가짐
+            else:
+                triangle[row+1][i] += max(triangle[row][i-1], triangle[row][i])
+    return max(triangle[-1])
+```

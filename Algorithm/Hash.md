@@ -60,4 +60,3 @@ s = sorted(tmp.items(), key = operator.itemgetter(1), reverse=True)
         for t in s[:2]:
 
 ```
-

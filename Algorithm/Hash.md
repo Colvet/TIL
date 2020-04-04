@@ -33,7 +33,7 @@ print(my_dict - my_dict2)
 
 ## str.startswith(), str.endswith()함수
 > 첫문자, 마지막 문자 같은지 여부 확인할때 사용     
-> 찾고자하는 입력값이 리스타, 세트라면 tuple로 변환
+> 찾고자하는 입력값이 리스트, set이라면 tuple로 변환
 ```python
 choice = ['http:','https:']
 

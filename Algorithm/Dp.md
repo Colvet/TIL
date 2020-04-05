@@ -81,3 +81,7 @@ def solution(triangle):
                 triangle[row+1][i] += max(triangle[row][i-1], triangle[row][i])
     return max(triangle[-1])
 ```
+
+## 11111110111110011110000
+## rm, cp, mkdir
+

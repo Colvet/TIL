@@ -82,6 +82,5 @@ def solution(triangle):
     return max(triangle[-1])
 ```
 
-## 11111110111110011110000
-## rm, cp, mkdir
+## abbaaao00aabb
 

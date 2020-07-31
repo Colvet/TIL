@@ -27,3 +27,13 @@ if __name__ == '__main__':
         
     print(result)
 ```
+
+```python
+for start in range(n):
+    while summary < m and end < n:
+        summary += data[end]
+        end += 1
+    if summary == m:
+        result += 1
+    summary -= data[l]
+print(result)

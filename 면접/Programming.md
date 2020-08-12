@@ -23,11 +23,12 @@
 ## Rest Api(Representational State Trasnfer)
 + 웹에 존재하는 모든 자원(이미지, 동영상, DB 자원)에 고유한 URI를 부여해 활용하는 것
 + 자원을 정의하고 자원에 대한 주소를 지정하는 방법론을 의미
++ 리소스, 메서드, 메시지
++ 명사 사용
 
-## Restful.
+## Restful
 + 각 구성요소들의 역할이 완벽하게 분리되어 있는것
 + URI의 명확한 정의
 + 파일 확장자는 미포함
 
-## Get vs Post
 

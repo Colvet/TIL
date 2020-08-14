@@ -31,4 +31,4 @@
 + URI의 명확한 정의
 + 파일 확장자는 미포함
 
-
+## 네트워크 A-class, B-class, C-class 비교

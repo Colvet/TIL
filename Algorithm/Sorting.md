@@ -9,5 +9,3 @@
 ## Merge Sort
 
 ## Quick Sorting
-
-## 

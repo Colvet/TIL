@@ -14,6 +14,14 @@
 + 두 노드 사이의 경로, 최단 경로를 구할 때 사용
 + 방문 여부를 무조건 검사 해야 함
 + FIFO(First in Frist out) 원칙, 큐(Queue) 사용
+```py
+from collections import deque
+
+queue = deque()
+queue.append() # 삽입
+queue.popleft() # 출력
+queue.reverse() # 역순으로 바꾸기
+```
 
 ## 인접행렬, 인접 리스트로 알고리즘 구현
 > 인접 행렬은 가중치를 줄 수 있다. 하지만 인접 리스트의 실행 속도가 빠름

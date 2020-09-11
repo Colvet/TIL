@@ -1,5 +1,15 @@
 # Java
 
+## 자바의 Main Class 규격
+
+## Array vs ArrayList, LinkedList
+
+## Heap Memory, Stack Memory
+
+## Java Hashmap 작동 원리
++ Key를 알경우 시간 복잡도
++ 최악의 경우는?
+
 ## Overloding vs Overriede
 ### Overloding
 + 같은 이름의 함수를 여러개 정의하고, 매개변수의 수나 타입이 다를경우

@@ -11,6 +11,11 @@
 ## 인덱싱을 사용해서 생기는 단점
 
 ## Join 설명
+### Outer Join
+
+### Left Otuer Join
+
+### Right Outer Join
 
 ## Relationship
 + 1:1

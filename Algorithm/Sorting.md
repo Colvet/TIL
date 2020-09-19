@@ -33,6 +33,19 @@ for i in range(1, len(array)):
 1. 왼쪽에서 Pivot 보다 큰 데이터 선택, 오른쪽에서는 Pivot보다 작은 데이터 선택 이후 두 데이터 바꾸기
 2. 좌우가 엇갈릴경우 Pivot과 작은 데이터의 위치를 서로 변경
 3. 초기 Pivot보다 왼쪽에 있는 데이터는 모두 Pivot 보다 작고 오른쪽은 Pivot보다 크다. -> 피벗을 기준으로 데이터 묶음을 나누는 작업을 분할(Divide), Partition이라고 한다
+```py
+def quick_sort(array):
+    if len(array) <=1:
+        return array
+    pivot = array[0]
+    tail = array [1:]
+
+    lef_side = [x for x in tail if x<=1 pivot]
+    right_side = [x for x in tail if x > pivot]    
+
+    return quick_sort(left_side) + [pivot] + quick_sort(right_side)
+
+```
 
 ## Bubble Sort
 

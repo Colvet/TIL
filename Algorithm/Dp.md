@@ -84,3 +84,5 @@ def solution(triangle):
 
 ## abbaaao00aabb
 
+## Dp 구현하기
+

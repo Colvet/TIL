@@ -44,7 +44,6 @@ def quick_sort(array):
     right_side = [x for x in tail if x > pivot]    
 
     return quick_sort(left_side) + [pivot] + quick_sort(right_side)
-
 ```
 
 ## Bubble Sort

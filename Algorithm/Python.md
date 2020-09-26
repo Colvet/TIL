@@ -10,8 +10,9 @@ X : array = [[0]*m] * n  (리스트 안에 포함된 리스트가 모두 같은 
 ## 리스트에서 특정값의 원소 제거
 ```python
 a = [1,2,3,4,5,5,5]
-remove_set = {4,5}
 
+## 리스트에서 특정값 전체 삭제
+remove_set = {4,5}
 result = [i for i in a if i not in remove_set]
 ## [1,2,3,5,5,5]
 ```
@@ -92,4 +93,20 @@ result = list(product(data, repeat=2)) ## 2개를 뽑는 모든 순열 구하기
 
 from itertools import combinations_with_replacement
 result = list(combinations_with_replacement(data, 2)) ## 2개를 뽑는 모든 조합 구하기(중복 허용)
+
+Counter
+from collections import Counter
+counter = Counter(['red','blue','red','green','blue','blue'])
+print(counter['blue']) ## 3
+print(counter['grren']) ## 2
+print(dict(counter)) ## {'red':2,'blue':3, 'green':1}
+
+최대공약수와 최소 공배수
+import math
+def lcm(a,b):
+    return a * b // match.gcd(a,b)
+
+a=21, b=14
+print(math.gcd(21,14)) # 최대 공약수 계산
+print(lcm(21,14)) # 최소 공배수 계산
 ```

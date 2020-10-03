@@ -25,25 +25,31 @@ def solution(n, lost, reserve):
 ```python
 # python
 # 초기화, n개의 노드
-parent = [i for i in range(n)]
+parent = [0] * (n+1)
+for i in range(1,n+1):
+    parent[i]=i
 
 # 부모노드 가지고오기
-def findParent(x):
+def findParent(parent, x):
     if parent[x] == x:
         return x
     else:
-        return findParent(parent[x])
+        return findParent(parent, parent[x])
 
 # 부모 노드 합치기
-def union(x,y):
-    _x = findParent(x)
-    _y = findParent(y)
+def union(parent, x,y):
+    _x = findParent(parent, x)
+    _y = findParent(parent, y)
+    if a < b:
+        parent[_y] = _x
+    else:
+        parent[_x] = y
     parent[_y] = _x
 
 # 같은 부모 노드인지 확인
 def checkParent(x, y):
-    _x = findParent(x)
-    _y = findParent(y)
+    _x = findParent(parent, x)
+    _y = findParent(parent,   y)
     
     if _x == _y:
         return True

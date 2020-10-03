@@ -35,8 +35,18 @@ public class SampleProject {
 + 메모리: ArrayList < LinkedList
     + LinkedList 참조자를 위해 추가적인 메모리를 할당해
 
+## 가시성(Visibility)
++ 클래스와 클래스 멤버인 멤버필드와 메소드의 사용범위를 결정하는 것
++ 한 클래스의 멤버필드와 메소드에 대한 다른 클래스의 접근 여부를 접근제어자로 제어 하는것(public, protected, default, private)
 
-## Heap Memory, Stack Memory
+## Heap Memory, Stack Memory, Garbage Collection
+1. https://yaboong.github.io/java/2018/05/26/java-memory-management/
+2. https://yaboong.github.io/java/2018/06/09/java-garbage-collection/
+3. https://d2.naver.com/helloworld/1329
+
+## Garbage Collection
+> 
+
 
 ## Java Hashmap 작동 원리
 + Key를 알경우 시간 복잡도

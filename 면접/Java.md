@@ -1,6 +1,6 @@
 # Java
 
-## 자바의 Main Class 규격
+## 자바의 Main Class
 + 자바 어플리케이션 실행시 가장 먼저 동작
 + 어느 객체에서든 접근할 수 있으며 컴파일 되는 순간 정의되는 Return 값이 없는 함수
 ```
@@ -35,9 +35,6 @@ public class SampleProject {
 + 메모리: ArrayList < LinkedList
     + LinkedList 참조자를 위해 추가적인 메모리를 할당해
 
-## 가시성(Visibility)
-+ 클래스와 클래스 멤버인 멤버필드와 메소드의 사용범위를 결정하는 것
-+ 한 클래스의 멤버필드와 메소드에 대한 다른 클래스의 접근 여부를 접근제어자로 제어 하는것(public, protected, default, private)
 
 ## Heap Memory, Stack Memory, Garbage Collection
 1. https://yaboong.github.io/java/2018/05/26/java-memory-management/
@@ -45,8 +42,49 @@ public class SampleProject {
 3. https://d2.naver.com/helloworld/1329
 
 ## Garbage Collection
-> 
+> 프로그램이 동적으로 할당했던 메모리 영역 중에서 필요없게 된 영역을 해제하는 기능 
 
+### Stack Memory
++ Heap 영역에 생성된 Object 타입의 데이터의 참조값이 할당
++ 원시타입의 데이터가 값과 함께 할당된다. -> 원시타입의 데이터들은 참조값이 저장 되는 것이 아니다
++ 지역변수들은 scope 에 따른 visibility 를 가진다.
++ 각 Thread는 자신만의 stack 을 가진다.
+### 원시데이터(Primitive Types)
+> byte, short, int, long, double, float, boolean, char 
+### 참조형 데이터
+> String, StringBuffer, List 등 원시 데이터 이외
+
+### 가시성(Visibility)
++ 클래스와 클래스 멤버인 멤버필드와 메소드의 사용범위를 결정하는 것
++ 한 클래스의 멤버필드와 메소드에 대한 다른 클래스의 접근 여부를 접근제어자로 제어 하는것(public, protected, default, private)
+
+### Heap Memory
++ 참조형의 데이터 타입을 갖는 객체, 배열등은 Heap 영역에 데이터 저장
+
+### Static Memory
++ 전역변수, 정적 멤버 변수(static이 붙은 자료형) 저장
++ Static 영역의 데이터는 프로그램의 시작부터 종료가 될 때까지 메모리에 남아 있음
+```java
+class Human{
+    String name;
+    int phone;
+    static int pin = 1234;
+}
+
+public static void main(String[] args){
+    System.out.println("Human pin": + Human.pin); // Human pin: 1234
+    // 클래스 변수를 객체화 시키지 않아도 바로 사용 가능
+    
+    Human h1 = new Human();
+    h1.name = "KSH";
+    h1.phone = "010";
+    System.out.println("Human name": + h1.name); // Human name: KSH
+    System.out.println("Human phone": + h1.phone); // Human phone: 010
+    //name, phone은 객체 변수이므로 Human 클래스를 객체화 시켜야지만 사용 가능
+}
+
+
+```
 
 ## Java Hashmap 작동 원리
 + Key를 알경우 시간 복잡도
@@ -58,7 +96,3 @@ public class SampleProject {
 ### Override
 + 상속 관계에 있는 클래스 간에 같은 이름의 메소드를 정의하는 기술을 
 
-## DI(Dependency Inject)
-A라는 객체에서 B, C객체를 사용(의존)할 때 A객체에서 직접 생성을 하는 것이 아닌 외부(IOC컨테이너)에서 생성된 B, C객체를 조립(주입)시켜 setter 혹은 생성자를 통해 사용할 수 있는거죠.
-
-## GC(Garbage Collector)

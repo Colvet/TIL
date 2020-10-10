@@ -59,3 +59,10 @@
 + 시간 초과 기간 동안 원격 서비스를 호출하련느 모든 시도가 즉시 실패 됨
 
 ## 3주차
+1. Microservice Inner Architecture의 의미에 대해 이해할 수 있다.
+
+2. Layered Architecture에 대해 이해할 수 있다.
+
+3. Hexagonal Architecture에 대해 이해하고, Hexagonal Architecture에 의해 Layered Architecture가 어떻게 변경되는지 알 수 있다.
+
+4. Hexagonal Architecture를 반영한 Layered Architecture 각 Layer 설계에 대해 살펴본다. 

@@ -59,10 +59,17 @@
 + 시간 초과 기간 동안 원격 서비스를 호출하련느 모든 시도가 즉시 실패 됨
 
 ## 3주차
-1. Microservice Inner Architecture의 의미에 대해 이해할 수 있다.
 
-2. Layered Architecture에 대해 이해할 수 있다.
+## Application Architecture
+> Web서버 Application서버 처리 영역 -> Application Architecture 영역
++ 외부 Architecture: Architecture를 이루는 구성요소의 관계를 설명
++ 내부 Architecture: Application의 내부 구조를 정의하는 활동
 
-3. Hexagonal Architecture에 대해 이해하고, Hexagonal Architecture에 의해 Layered Architecture가 어떻게 변경되는지 알 수 있다.
+## Spring의 등장
++ POJO(Plain Old Java Object) 컨테이너 -> 로직을 순수하게 표현하는 것을 중요시 함
++ 프레임워크에 의존하지 않는 일반 Object 주기 관리
++ Object간의 의존 관계
+### POJO
++ 비즈니스를 개체 모델로 표현
++ 기술에 의존적인 부분들을 분리하려고 노력함(Transaction 처리 및 에러, 로깅 처리, 데이터 처리) -> 의존관계들을 분리하기 위해 Spring에서는 AOP나 DI 기술을 활용
 
-4. Hexagonal Architecture를 반영한 Layered Architecture 각 Layer 설계에 대해 살펴본다. 

@@ -73,3 +73,70 @@
 + 비즈니스를 개체 모델로 표현
 + 기술에 의존적인 부분들을 분리하려고 노력함(Transaction 처리 및 에러, 로깅 처리, 데이터 처리) -> 의존관계들을 분리하기 위해 Spring에서는 AOP나 DI 기술을 활용
 
+## Tier vs Layer 구분
+### Tier
++ 물리층: 물리적인 장비, 서버 컴퓨터, 
+
++ 클라이언트 층(PC,스마트폰) - 중간층(Application 서버) - EIS층(데이터베이스, 레거시 시스템)
+### Layer
+> 설계자들이 복잡한 시스템을 분리 할 때 흔히 사용하는 패턴 중 하나
++ 논리층: Tier 내부의 논리적인 분할
++ 클라이언트 층 - 중간(Presentation, Business Logic, Data Access Layer) - EIS층
++ 상위는 하위를 호출함
++ 하위의 여러 Layer를 알 필요 없이 바로 밑에 근접한 Layer를 활용함
++ 다양한 서비스를 이용함
+
+## Layered Architecture
++  각 Layer의 표준화, 각 Layer의 모듈화
+1. 상의 Layer가 하위 Layer의 변경에 영향을 받지 않게 함
+2. 어플리케이션이 쉽게 변경되거나 확장될 수 있게 함
+
+## Spring에서 일반적으로 사용된느 구조
+1. Presentation Layer
++ 컨트롤러: 화면 표현 처리, 화면 전환 버튼을 눌렀을 때 이벤트 처리, 세션 관리 기능 제공
+2. Business Logic Layer
++ 서비스: Presentation Lyaer의 컨트롤러에 의해 호출, 도메인 로직을 호출, 특정업무 처리 흐름 제어
++ 도메인: Business Logic 실행에 주요 개념 및 그 구체적인 로직을 담고 있음, Spring의 POJO 계층으로 구성
+3. Data Access Layer
++ DAO: DAO(Data Access Object)라는 구성요소를 가짐, 서비스가 처리한 결과를 받아 데이터로 저장하는 역할 수행
+
+## Layer 간의 호출 원칙
+> 개발 효율성을 높임, 운영 시 쉽게 변경/확장 가능
+1. 각 Layer는 높은 응집력을 갖춘 외부와 Layer 간의 낮은 결합도를 갖도록 설계
+2. Layer 사이으 ㅣ호출은 인터페이스를 통해 호출하는것이 바람직함 -> 인터페이스를 하나 더 만드는 것이 번거로워 클래스를 이요하지 않기
+ + 인터페이스 사용: Layer의 경계를 넘어서 들어오는 요청을 명확히 정의하겠다는것을 의미함
+ 3. 구현 클래스에 직접 의존하지 않음으로써 Object 사이에 약한 결합을 유지함
+
+## Hexagonal Architecture
+> 제일 하위에 존재하는 Data Accesscmddml DB를 교체한다면 BL층에 영향 없이 변경하기 힘듬. 이러한 단점을 해결하는 방안이 Hexagonal Architecture.
+
+## BL 처리시
++ BL 처리영역: 어플리케이션에서 제일 중요한 영역 -> BL에 영향을 미치지 않는것이 가장 좋은 설계
+    + 브라우저에 표현하는 기술
+    + 데이터베이스에 저장하는 기술
++ BL 결과 처리 영역 -> 결과를 사용자에게 보여주는 부분 + 결과를 저장하는부분(기술의 변화에 많은 영향을 받는 부분)
+
+## DIP(Dependency Inversion Principle) 의존관계의 역전 원칙
+> 로버트 C.마틴: 객체지향 원칙의 5가지 원칙, [http://www.kmooc.kr/courses/course-v1:KAISTk+2018_K14+2020_K14_02/courseware/236506e314704c4e9468de809ad3d740/4f6371baa84949dd98890de7c89f8b34/?child=first]: 6:59
++ 의존하려면 ``잘 변경되지 않는`` 부분에 의존해야 한다는 원칙
++ 안정된 방향으로 의존하여 다른 패키지가 변경 받을 때 영향을 덜 받도록 하는 것
++ 다른 Layer에 가장 큰 영향을 줄 것 같은 위치에 있는 Layer의 의존 방향을 바꿔 적용함
+
+## Transaction Script 패턴 구조
+> 단순한 입출력 구조의 쉬운 업무 처리를 위한 마이크로 서비스 내부 구조로 활용하면 유용함
+
+## Domain Model 패턴 구조
+> 복잡한 비즈니스 로직을 정리 후 핵심 서비스로 활용하는 경우 효율적
+
+## Data Access 층의 역할
+### SQL Mapping
+> 데이터 모델리을 통해 관계형 테이블 작성 후 BL을 처리할 때 유용함
++ BL Layer에 Transaction Script 패턴을 적용하는 경우 적합한 방식
++ 개발자가 직접 SQL 작성 -> 세밀한 SQL 컨트롤이 필요한 경우 유용함
+
+### OR MApping
+> 객체지향 중심, Domain Model의 Entityf 추출
+1. BL에 필요한 Object가 무엇인지 먼저 고려함
+2. 비즈니스를 처리하는 흐름 구현
+3. 저장소 결정 및 Object에 Mapping하여 데이터를 처리
++ OR MApper가 SQL문을 자동으로 생성 -> 저장소를 다른 RDB 또는 No-SQL 저장소로 쉽게 변경하는 경우 유용함

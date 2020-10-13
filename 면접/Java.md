@@ -10,6 +10,8 @@ public class SampleProject {
     } 
 }
 ```
+## Class vs Object
+## List vs Set
 
 ## Array vs List vs ArrayList vs LinkedList
 ### Array
@@ -31,10 +33,46 @@ public class SampleProject {
 ### ArrayList vs LinkedList
 + 추가/삭제: ArrayList < LinkedList
 + 조회: ArrayList > LinkedList
-    + LinkedList는 자료들을 저장 공간에 불연속적인 단위로 저장 -> LinkedList는 메모리 이곳저곳에 산재해 저장되어 있는 노드들을 접근하는데 ArrayList보다는 긴 지연 시간이 소모
-+ 메모리: ArrayList < LinkedList
+    + LinkedList는 자료들을 저장 공간에 불연속적인 단위로 저장 -> LinkedList는 메모리 이곳저곳에 산재해 저장되어 있는 노드들을 접근 -> ArrayList보다는 긴 지연 시간이 소모
++ 메모리: ArrayList < Link edList
     + LinkedList 참조자를 위해 추가적인 메모리를 할당해
 
+## Stack vs Queue
+### Stack
++ 예시
++ 왜 사용하는가
++ 내부적으로 어떤 자료구조로 되어있는가?
+
+### Queue
++ 예시: 메시지 처리
+### 긴급 및 예약발송은 어떻게 처리해야되는가?
++ 어떤 자료구조 사용?
+
+## Set
++ 중복을 허용하지 않으면 내부적으로 어떻게 같다를 판단하는가?
+
+## Map
+
+## HashTable vs HashMap
+
+## Hasing?
++ Hash 중복값 피하는 방법은?
++ 왜하냐
+## 배열의 사이즈를 줄이기 위해서는?
+
+## Tree
++ 내부적을 어떻게 구현되어있는가
+### 이진 트리
+## 이진 검색트리
++ 검색 속도가 가장 느린 경우는?
+
+### 이진 트리 vs Tree
++ 내부적 구현 차이
+
+## 동기화를 지원하는 자료구조는?
++ 필요한 이유
++ 언제 필요할까?
++ 멀티스레드 환경에서 동기화르 지원하지 안을경우 문제점은?
 
 ## Heap Memory, Stack Memory, Garbage Collection
 1. https://yaboong.github.io/java/2018/05/26/java-memory-management/
@@ -89,6 +127,16 @@ public static void main(String[] args){
 ## Java Hashmap 작동 원리
 + Key를 알경우 시간 복잡도
 + 최악의 경우는?
+
+## Generic vs non-Generic 타입
+### Generic
++ 종류
++ 장점
++ 단점
++ 예시
++ Object형으로 대신 사용하면 안되나
+
+### non-Generic
 
 ## Overloding vs Overriede
 ### Overloding

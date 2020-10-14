@@ -1,16 +1,45 @@
 # Java
 
+## OOP(Object Oriented Programming)
+> 객체를 기반으로하는 프로그래밍으로 클래스를 정의하고 클래스로부터 객체를 생성하여 객체의 행동과 상태를 통해 모든 객체와 상호작용을 하는 것
+
 ## 자바의 Main Class
 + 자바 어플리케이션 실행시 가장 먼저 동작
 + 어느 객체에서든 접근할 수 있으며 컴파일 되는 순간 정의되는 Return 값이 없는 함수
-```
+```java
 public class SampleProject { 
     public static void main(String[] args) { 
-
     } 
 }
 ```
-## Class vs Object
+## Class vs Object vs Instance
+> 객체는 현실 세계, 인스턴스는 소프트웨어 세계.     
+객체는 ‘실체’, 인스턴스는 ‘관계’에 초점
+### Class
++ 설계도
++ 연관되어 있는 변수, 메서드의 집합
+### Object
++ 설계도로 구현한 모든 대상
++ 클래스의 인스턴스
+### Insntance
++ 설계도를 바탕으로 소프트웨어 세계에 구현된 구체적인 실체
++ 실체화된 인스턴스는 메모리에 할당.
+```java
+/* 클래스 */
+public class Human {
+  ...
+}
+/* 객체와 인스턴스 */
+public class Main {
+  public static void main(String[] args) {
+    Human Kim, John; // '객체'
+
+    // 인스턴스화
+    Kim = new Human(); // Kim은 Human 클래스의 '인스턴스'(객체를 메모리에 할당)
+    John = new Hman(); // John은 Human 클래스의 '인스턴스'(객체를 메모리에 할당)
+  }
+}
+```
 
 ## 데이터 타입 vs 변수
 

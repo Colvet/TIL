@@ -11,6 +11,18 @@ public class SampleProject {
 }
 ```
 ## Class vs Object
+
+## 데이터 타입 vs 변수
+
+## Value Type Vs Reference Type
++ char, String 차이 및 각각의 사용 용도
+
+## "==" vs Equals
+
+## String vs new String
+
+## 같은 메모리를 참조한다는것은 어떻게 알 수 있나
+
 ## List vs Set
 
 ## Array vs List vs ArrayList vs LinkedList
@@ -87,6 +99,8 @@ public class SampleProject {
 + 원시타입의 데이터가 값과 함께 할당된다. -> 원시타입의 데이터들은 참조값이 저장 되는 것이 아니다
 + 지역변수들은 scope 에 따른 visibility 를 가진다.
 + 각 Thread는 자신만의 stack 을 가진다.
++ 주소값이 Stack영역에 저장 되는 이유는?: 
+
 ### 원시데이터(Primitive Types)
 > byte, short, int, long, double, float, boolean, char 
 ### 참조형 데이터
@@ -128,6 +142,9 @@ public static void main(String[] args){
 + Key를 알경우 시간 복잡도
 + 최악의 경우는?
 
+## Java HashCode
+### HashCode를 이용해서 같은 객체인지 비교하는 방법
+
 ## Generic vs non-Generic 타입
 ### Generic
 + 종류
@@ -142,5 +159,6 @@ public static void main(String[] args){
 ### Overloding
 + 같은 이름의 함수를 여러개 정의하고, 매개변수의 수나 타입이 다를경우
 ### Override
-+ 상속 관계에 있는 클래스 간에 같은 이름의 메소드를 정의하는 기술을 
++ 상속 관계에 있는 클래스 간에 같은 이름의 메소드를 정의하는 기술
 
+### Stpring Pool

@@ -1,15 +1,58 @@
 # Java
 
+## OOP(Object Oriented Programming)
+> 객체를 기반으로하는 프로그래밍으로 클래스를 정의하고 클래스로부터 객체를 생성하여 객체의 행동과 상태를 통해 모든 객체와 상호작용을 하는 것
+
 ## 자바의 Main Class
 + 자바 어플리케이션 실행시 가장 먼저 동작
 + 어느 객체에서든 접근할 수 있으며 컴파일 되는 순간 정의되는 Return 값이 없는 함수
-```
+```java
 public class SampleProject { 
     public static void main(String[] args) { 
-
     } 
 }
 ```
+## Class vs Object vs Instance
+> 객체는 현실 세계, 인스턴스는 소프트웨어 세계.     
+객체는 ‘실체’, 인스턴스는 ‘관계’에 초점
+### Class
++ 설계도
++ 연관되어 있는 변수, 메서드의 집합
+### Object
++ 설계도로 구현한 모든 대상
++ 클래스의 인스턴스
+### Insntance
++ 설계도를 바탕으로 소프트웨어 세계에 구현된 구체적인 실체
++ 실체화된 인스턴스는 메모리에 할당.
+```java
+/* 클래스 */
+public class Human {
+  ...
+}
+/* 객체와 인스턴스 */
+public class Main {
+  public static void main(String[] args) {
+    Human Kim, John; // '객체'
+
+    // 인스턴스화
+    Kim = new Human(); // Kim은 Human 클래스의 '인스턴스'(객체를 메모리에 할당)
+    John = new Hman(); // John은 Human 클래스의 '인스턴스'(객체를 메모리에 할당)
+  }
+}
+```
+
+## 데이터 타입 vs 변수
+
+## Value Type Vs Reference Type
++ char, String 차이 및 각각의 사용 용도
+
+## "==" vs Equals
+
+## String vs new String
+
+## 같은 메모리를 참조한다는것은 어떻게 알 수 있나
+
+## List vs Set
 
 ## Array vs List vs ArrayList vs LinkedList
 ### Array
@@ -31,10 +74,46 @@ public class SampleProject {
 ### ArrayList vs LinkedList
 + 추가/삭제: ArrayList < LinkedList
 + 조회: ArrayList > LinkedList
-    + LinkedList는 자료들을 저장 공간에 불연속적인 단위로 저장 -> LinkedList는 메모리 이곳저곳에 산재해 저장되어 있는 노드들을 접근하는데 ArrayList보다는 긴 지연 시간이 소모
-+ 메모리: ArrayList < LinkedList
+    + LinkedList는 자료들을 저장 공간에 불연속적인 단위로 저장 -> LinkedList는 메모리 이곳저곳에 산재해 저장되어 있는 노드들을 접근 -> ArrayList보다는 긴 지연 시간이 소모
++ 메모리: ArrayList < Link edList
     + LinkedList 참조자를 위해 추가적인 메모리를 할당해
 
+## Stack vs Queue
+### Stack
++ 예시
++ 왜 사용하는가
++ 내부적으로 어떤 자료구조로 되어있는가?
+
+### Queue
++ 예시: 메시지 처리
+### 긴급 및 예약발송은 어떻게 처리해야되는가?
++ 어떤 자료구조 사용?
+
+## Set
++ 중복을 허용하지 않으면 내부적으로 어떻게 같다를 판단하는가?
+
+## Map
+
+## HashTable vs HashMap
+
+## Hasing?
++ Hash 중복값 피하는 방법은?
++ 왜하냐
+## 배열의 사이즈를 줄이기 위해서는?
+
+## Tree
++ 내부적을 어떻게 구현되어있는가
+### 이진 트리
+## 이진 검색트리
++ 검색 속도가 가장 느린 경우는?
+
+### 이진 트리 vs Tree
++ 내부적 구현 차이
+
+## 동기화를 지원하는 자료구조는?
++ 필요한 이유
++ 언제 필요할까?
++ 멀티스레드 환경에서 동기화르 지원하지 안을경우 문제점은?
 
 ## Heap Memory, Stack Memory, Garbage Collection
 1. https://yaboong.github.io/java/2018/05/26/java-memory-management/
@@ -49,6 +128,8 @@ public class SampleProject {
 + 원시타입의 데이터가 값과 함께 할당된다. -> 원시타입의 데이터들은 참조값이 저장 되는 것이 아니다
 + 지역변수들은 scope 에 따른 visibility 를 가진다.
 + 각 Thread는 자신만의 stack 을 가진다.
++ 주소값이 Stack영역에 저장 되는 이유는?: 
+
 ### 원시데이터(Primitive Types)
 > byte, short, int, long, double, float, boolean, char 
 ### 참조형 데이터
@@ -90,9 +171,23 @@ public static void main(String[] args){
 + Key를 알경우 시간 복잡도
 + 최악의 경우는?
 
+## Java HashCode
+### HashCode를 이용해서 같은 객체인지 비교하는 방법
+
+## Generic vs non-Generic 타입
+### Generic
++ 종류
++ 장점
++ 단점
++ 예시
++ Object형으로 대신 사용하면 안되나
+
+### non-Generic
+
 ## Overloding vs Overriede
 ### Overloding
 + 같은 이름의 함수를 여러개 정의하고, 매개변수의 수나 타입이 다를경우
 ### Override
-+ 상속 관계에 있는 클래스 간에 같은 이름의 메소드를 정의하는 기술을 
++ 상속 관계에 있는 클래스 간에 같은 이름의 메소드를 정의하는 기술
 
+### Stpring Pool

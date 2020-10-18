@@ -7,7 +7,9 @@
 + 사용원인
 
 ## DB 인덱싱
-### B tree 인덱싱
+> DB table의 책갈피
+### B tree 인덱싱(Balanced Tree)
+> 참고: [https://12bme.tistory.com/138]
 ### 해싱 인덱싱
 
 ## 인덱싱을 사용해서 생기는 단점

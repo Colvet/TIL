@@ -41,11 +41,15 @@ public class Main {
 }
 ```
 
+## Pass by Value, Pass by Reference
+> 참고: [https://onsil-thegreenhouse.github.io/programming/java/2017/11/09/java_tutorial_1-8/]
+
+
 ## 데이터 타입 vs 변수
 
 ## Value Type Vs Reference Type
 + char, String 차이 및 각각의 사용 용도
-
++ 참고: [https://onsil-thegreenhouse.github.io/programming/java/2018/02/18/java_tutorial_1-22/]
 ## "==" vs Equals
 
 ## String vs new String
@@ -54,7 +58,7 @@ public class Main {
 
 ## List vs Set
 
-## Array vs List vs ArrayList vs LinkedList
+## Array vs List vs ArrayList vs LinkedList vs HashSet
 ### Array
 + 정적인 길이를 제공하는 배열
 ### List
@@ -77,7 +81,8 @@ public class Main {
     + LinkedList는 자료들을 저장 공간에 불연속적인 단위로 저장 -> LinkedList는 메모리 이곳저곳에 산재해 저장되어 있는 노드들을 접근 -> ArrayList보다는 긴 지연 시간이 소모
 + 메모리: ArrayList < Link edList
     + LinkedList 참조자를 위해 추가적인 메모리를 할당해
-
+### HashSet
+> 순서 상관X, 데이터의 존재 유무가 중요
 ## Stack vs Queue
 ### Stack
 + 예시

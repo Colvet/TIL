@@ -168,6 +168,8 @@ public static void main(String[] args){
     System.out.println("Human phone": + h1.phone); // Human phone: 010
     //name, phone은 객체 변수이므로 Human 클래스를 객체화 시켜야지만 사용 가능
 }
+
+
 ```
 
 ## Java Hashmap 작동 원리

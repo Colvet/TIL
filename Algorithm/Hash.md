@@ -51,12 +51,16 @@ print(url.startswith(tuple(choice)))
 import operator
 ## 2번째 원소로 정렬
 best_genre = sorted(best_genre.keys(), key=(lambda best_genre: best_genre[1]), reverse=True)
-
 op = sorted(best_genre.items(), key = operator.itemgetter(1), reverse=True)
 
 ## 두번째 원소로 내림차순, 첫번쨰 원소로 오름차순
 s = sorted(tmp.items(), key = operator.itemgetter(1), reverse=True)
-        sorted(s, key = operator.itemgetter(0))
-        for t in s[:2]:
+sorted(s, key = operator.itemgetter(0))
+for t in s[:2]:
+
+또는
+
+sorted(a.items(), key = lambda x: (x[1], -x[0]))
+
 
 ```

@@ -23,7 +23,7 @@ def findParent(parent, x):
 def union(parent, x,y):
     _x = findParent(parent, x)
     _y = findParent(parent, y)
-    if a < b:
+    if _x < _y:
         parent[_y] = _x
     else:
         parent[_x] = y
@@ -38,6 +38,17 @@ def checkParent(x, y):
         return True
     else:
         return False
+#n 은 node갯수, e는 간선 갯수
+parent = [0]*(n+1)
+for i in range(1, n+1):
+    parent[i] = i
+
+for i in range(e):
+    a,b = map(int, input().split())
+    union(parent, a,b)
+for i in range(1, v+1):
+    print(find_parent(parent, i), end = ' ')
+
 ```
 
 
@@ -52,7 +63,7 @@ def checkParent(x, y):
 ## 위상 정렬
 + 진입차수(Indegree): 특정한 노드로 들어오는 간선의 갯수
 + 진출차수(Outdegree): 특정한 노드에서 나가는 간선의 개수
-1. 진입차수가 0인ㄷ 모든 노드를 큐에 넣는다
+1. 진입차수가 0인 모든 노드를 큐에 넣는다
 2. 큐가 빌 때까지 다음의 과정을 반복한다.
     + 큐에서 원소를 꺼내 해당 노드에서 나가는 간선을 그래프에서 제거한다
     + 새롭게 진입차수가 0이 된 노드를 큐에 넣는다

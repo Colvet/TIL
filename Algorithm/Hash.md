@@ -60,7 +60,7 @@ for t in s[:2]:
 
 또는
 
-sorted(a.items(), key = lambda x: (x[1], -x[0]))
+a2 = sorted(a.items(), key = lambda x: (x[1],x[0]))
 
 
 ```

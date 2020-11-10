@@ -270,3 +270,20 @@
 + 생명주기 전 단계에서 도메인의 무결성 유지가 필요함
 + 1개이상의 Entity로 구성되며, 그 중 한 Entity는 Aggregate Root로 정의하며 구성에는 값 객체 포함 가능
 + 하나의 트랜젝션은 오직 하나의 Aggregate를 수정하고 Commit 하는 원칙
+
+## Modernization
+> 그래서 software modernization은 플랫폼을 바꾸고
+그다음에 Legacy를 현대화하는 것을 의미. 프로그램 언어, 라이브러리, 프로토콜을, 플랫폼을, 아키텍쳐를 바꿈. 현재의 어떤 고객들의 비지니스 요건들을 만족시킬 수 있게 해주는 모든 플랫폼들을 Software modernization
+
+## 클라우드 전환
+1. Rehosting
+    + 기존 On-Premise를 클라우드 상에 올림
+2. Refactor
+    + 코드 수정 최소화 
+    + Pass 위에 Container 를 동작 시킴
+    + CI/CD 작업
+    + twelve-factor 체크리스트 만족 
+3. Rearchitect
+    + Cloud에서 지원하는 여러가지 서비스들이나 관제 모니터링, 여러가지 DB들을 사용하는 형태
+4. Rebuild
+    + MSA 구조

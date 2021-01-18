@@ -194,3 +194,7 @@ public static void main(String[] args){
 + 상속 관계에 있는 클래스 간에 같은 이름의 메소드를 정의하는 기술
 
 ### Stpring Pool
+
+## Java 버전 차이
+### Java 12
+### Java 10
